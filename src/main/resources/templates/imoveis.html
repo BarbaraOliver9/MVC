@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listagem de Imóveis</title>
+</head>
+<body>
+<h1> Lista de Imoveis</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Código</th>
+        <th>Bairro</th>
+        <th>Metros Quadrados</th>
+        <th>Valor Aluguel</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="imovel: ${imoveis}" >
+        <td th:text="${imovel.cod}">Cod</td>
+        <td th:text="${imovel.bairro}" >Bairro</td>
+        <td th:text="${imovel.metroQuadrado}" >metroQuadrado</td>
+        <td th:text="${imovel.valorAluguel}" >valorAluguel</td>
+    </tr>
+    </tbody>
+</table>
+<hr>
+</body>
+</html>
